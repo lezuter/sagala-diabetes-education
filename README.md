@@ -46,7 +46,7 @@ Since this project uses **NPM** and **Bower** for dependency management, please 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/lezuter/sagala-diabetes-education.git](https://github.com/lezuter/sagala-diabetes-education.git)
+    git clone https://github.com/lezuter/sagala-diabetes-education.git
     ```
 2.  **Install Backend Dependencies (Build Tools):**
     ```bash
