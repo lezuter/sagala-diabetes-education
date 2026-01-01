@@ -39,4 +39,5 @@
 ├── Gruntfile.js          # Grunt Configuration
 └── package.json          # Node Dependencies
 ```
-
+---
+**Developed by [Derry Andhika](https://www.linkedin.com/in/lezut3r/)**
