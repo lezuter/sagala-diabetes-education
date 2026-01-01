@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+    /* Animasi Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Animasi slide up */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Class untuk animasi pada konten */
+.content-card, .content-text, .content-image {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s; /* Menunda animasi untuk elemen setelah yang lain */
+}
+
+/* Menambahkan animasi khusus untuk logo */
+.logo {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s; /* Menunda logo sedikit lebih cepat */
+}
+</style>
+</head>
+<body>
+    <script src="js/script.js"></script>
+    <div class="container">
+        <div class="logo fade-in" onclick="index()">
+            <h1><img src="images/Logo2.png" alt="Sagala" /></h1>
+        </div> 
+        <div class="content-image fade-in">
+            <img src="images/dm.jpg" alt="Ilustrasi Diabetes">
+        </div>
+        <div class="content-card fade-in">
+            <div class="content-text scroll-animate">
+                <h1>
+        <b>Diabetes Melitus</b>
+    <button class="back-button" onclick="goBack()">
+        <img src="images/previous.svg" alt="Back" />
+    </button>
+</h1>
+
+    <p><strong>Apasih yang dimaksud dari Diabetes Melitus itu ??</strong></p>
+    <p>
+        Diabetes melitus, atau sering disebut "kencing manis", adalah penyakit di mana tubuh memiliki terlalu banyak gula di dalam darah akibat dari gangguan fungsi hormon insulin atau berkurangnya jumlah insulin.
+    </p><br>
+    <p>
+        <strong>Lalu apakah itu insulin?</strong><br>
+        Insulin adalah hormon yang diproduksi oleh organ kelenjar (pankreas) yang berfungsi untuk membantu tubuh dalam mengontrol kadar gula dalam darah dan mengubah gula dalam darah menjadi sumber energi untuk tubuh.
+    </p>
+    <p><br>
+        <strong>Jenis – Jenis Diabetes Melitus</strong><br>
+        Ada dua jenis diabetes melitus:
+    </p><br>
+    <p><strong>Diabetes Melitus Tipe 1</strong></p>
+        <ul>
+            <li>Organ pankreas sama sekali tidak dapat membuat insulin sehingga gula menumpuk di darah.</li>
+            <li>Biasanya terjadi sejak kecil atau remaja atau Sering disebut dengan penyakit keturunan.</li>
+        </ul>
+    <p><br>
+    <p><strong>Diabetes Melitus Tipe 2</strong></p>
+        <ul>
+            <li>Pada jenis ini, organ kelenjar (pankreas) masih bisa membuat insulin, tetapi tidak cukup atau insulin tidak bekerja dengan baik.</li>
+            <li>Biasanya diabetes melitus tipe 2 ini terjadi pada orang dewasa, tapi bisa juga terjadi pada anak-anak yang jarang olahraga, makan makanan tidak sehat, atau kelebihan berat badan. Pada diabetes melitus tipe 2 ini terjadi karena gaya hidup yang tidak sehat.</li>
+        </ul>
+    <p><br>
+    <div class="imgfield">
+        <img src="images/tipediabetes.jpg" alt="tipediabetes">
+    </div><br><br>
+</div>
+
+</div>
+        <footer>
+            <button class="cpbtn1 fade-in" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+        <script>
+        // Fungsi untuk menambahkan class animasi setelah halaman dimuat
+window.addEventListener('load', function() {
+    // Menambahkan class 'fade-in' setelah halaman dimuat
+    document.querySelector('.logo').classList.add('fade-in');
+    document.querySelector('.content-image').classList.add('fade-in');
+    document.querySelector('.content-card').classList.add('fade-in');
+    document.querySelector('.content-text').classList.add('fade-in');
+});
+    </script>
+    </div>
+</body>
+</html>

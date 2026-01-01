@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* Animasi Global */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo Animasi */
+        .logo {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Animasi Scrollable Options */
+        .scrollable-container .option {
+            opacity: 0; /* Awalnya elemen tidak terlihat */
+            transform: translateY(30px); /* Elemen bergeser ke bawah */
+            animation: fadeInUp 0.8s ease-in-out forwards; /* Efek fade-in */
+        }
+
+        /* Delay untuk Setiap .option */
+        .scrollable-container .option:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .scrollable-container .option:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .scrollable-container .option:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .scrollable-container .option:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        .scrollable-container .option:nth-child(5) {
+            animation-delay: 1s;
+        }
+        .scrollable-container .option:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+        .scrollable-container .option:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+        .scrollable-container .option:nth-child(8) {
+            animation-delay: 1.6s;
+        }
+
+        /* Animasi Footer */
+        footer {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 1s forwards; /* Mulai setelah 2 detik */
+        }
+    </style>
+</head>
+<body>
+        <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo" onclick="index()">
+            <h1><img src="images/Logo2.png" alt="Sagala" /></h1>
+        </div>        
+
+        <!-- Scrollable Option -->
+        <div class="scrollable-container">
+            <div class="option" onclick="dm()">
+                <img src="images/dm.jpg" alt="Diabetes Melitus">
+                <h1>Diabetes Melitus</h1>
+                <p>Masayarakat awam lebih mengetahui diabetes melitus dengan sebutan kencing manis atau gula darah.</p>
+            </div>
+            <div class="option" onclick="faktorrisiko()">
+                <img src="images/faktor.jpg" alt="Faktor Risiko Diabetes Melitus">
+                <h1>Faktor Risiko Diabetes Melitus</h1>
+                <p>Faktor risiko diabetes melitus terbagi menjadi 2, dimana ada yang tidak dapat diubah dan dapat diubah.</p>
+            </div>
+            <div class="option" onclick="angkadm()">
+                <img src="images/angka.jpg" alt="Gaya Hidup">
+                <h1>Angka Diabetes Melitus Anak Indonesia</h1>
+                <p>Kalangan anak usia 0 – 18 tahun dari data Ikatan Dokter Anak Indonesia (IDAI).</p>
+            </div>
+            <div class="option" onclick="pencegahan()">
+                <img src="images/pencegahan.jpg" alt="Penanganan Diabetes">
+                <h1>Pencegahan Diabetes Melitus</h1>
+                <p>Ada banyak cara yang bisa dilakukan oleh kita untuk mencegah terjadinya diabetes melitus.</p>
+            </div>
+            <div class="option" onclick="batasan()">
+                <img src="images/batasan.jpg" alt="Penanganan Diabetes">
+                <h1>Batasan Konsumsi Gula</h1>
+                <p>Peraturan Menteri Kesehatan Nomor 30 Tahun 2013 memberikan anjuran tentang kandungan gula.</p>
+            </div>
+            <div class="option" onclick="animasi()">
+                <img src="images/animasi.png" alt="Penanganan Diabetes">
+                <h1>Animasi Edukasi</h1>
+            </div>
+            <div class="option" onclick="kandungangula()">
+                <img src="images/manis.jpg" alt="Penanganan Diabetes">
+                <h1>Kandungan Gula Pada Makanan dan Minuman Manis</h1>
+            </div>
+            <div class="option" onclick="resepmakanan()">
+                <img src="images/bekal.jpg" alt="Penanganan Diabetes">
+                <h1>Inspirasi Makanan Sehat Untuk Bekal</h1>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn1" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+</body>
+</html>

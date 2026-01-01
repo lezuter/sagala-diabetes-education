@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* Animasi untuk logo */
+        .logo2 {
+            transform: translateX(100%);  /* Mulai dari luar layar ke kanan */
+            animation: slideIn 0.5s ease-out, bounce 0.5s ease-out 0.5s forwards;
+        }
+
+        /* Keyframe untuk pergerakan slide dari kanan ke kiri */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%); /* Logo mulai dari luar layar */
+                opacity: 0;  /* Logo mulai transparan */
+            }
+            50% {
+                transform: translateX(-20px); /* Logo sedikit melampaui posisi akhir */
+                opacity: 1;  /* Membuat logo terlihat setengah jalan */
+            }
+            100% {
+                transform: translateX(0); /* Logo berhenti di tempatnya */
+                opacity: 1;  /* Pastikan logo tetap terlihat setelah animasi selesai */
+            }
+        }
+
+        /* Keyframe untuk pantulan setelah logo tiba di tempat */
+        @keyframes bounce {
+            0% {
+                transform: translateX(0);
+            }
+            20% {
+                transform: translateX(10px); /* Bergerak sedikit ke kanan */
+            }
+            50% {
+                transform: translateX(-5px); /* Bergerak sedikit ke kiri */
+            }
+            100% {
+                transform: translateX(0); /* Kembali ke posisi semula */
+            }
+        }
+        
+        /* Animasi untuk content-card */
+        .content-card4 {
+            opacity: 0;  /* Mulai dengan transparan */
+            transform: translateY(50px);  /* Mulai dari bawah */
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        /* Keyframe untuk pergerakan slide dari bawah ke atas */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px); /* Mulai dari bawah */
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0); /* Bergerak ke atas ke posisi semula */
+                opacity: 1;  /* Menjadi terlihat */
+            }
+        }
+        
+        /* Animasi untuk content-image */
+.content-image4 {
+    transform: translateX(-100%);  /* Mulai dari luar layar ke kiri */
+    animation: slideInLeft 0.5s ease-out, bounceLeft 0.5s ease-out 0.5s forwards;
+}
+
+/* Keyframe untuk pergerakan slide dari kiri ke kanan */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Mulai dari luar layar ke kiri */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(20px);  /* Bergeser sedikit dari posisi akhir */
+        opacity: 1;  /* Menampilkan elemen */
+    }
+    100% {
+        transform: translateX(0);  /* Berhenti pada posisi semula */
+        opacity: 1;  /* Pastikan elemen tetap terlihat */
+    }
+}
+
+/* Keyframe untuk pantulan setelah content-image tiba di tempat */
+@keyframes bounceLeft {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-10px);  /* Bergerak sedikit ke kiri */
+    }
+    50% {
+        transform: translateX(5px);  /* Bergerak sedikit ke kanan */
+    }
+    100% {
+        transform: translateX(0);  /* Kembali ke posisi semula */
+    }
+}
+
+/* Tambahkan kelas .show untuk content-image */
+.content-image4.show {
+    animation: slideInLeft 0.5s ease-out, bounceLeft 0.5s ease-out 0.5s forwards;
+}
+</style>
+</head>
+<body>
+        <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container3">
+        <!-- Logo -->
+        <div class="logo2" onclick="index()">
+            <h1><img src="images/72ppi/whitelogo.png" alt="Sagala" /></h1>
+        </div> 
+        
+        <div class="content-image4">
+            <img src="images/Asset 1.png" alt="Sagala" />
+    </div>
+        <div class="content-card4">
+    <div class="content-text5">
+    <h1>
+        <b>Inspirasi Makanan Untuk Bekal</b>
+    <button class="back-button4" onclick="goBack()">
+        <img src="images/previous.svg" alt="Back" />
+    </button>
+</h1>
+
+    <div class="scrollable-container4">
+   
+        <div class="option4" onclick="">
+            <h1>Batagor Mini</h1>
+            <img src="images/batagor.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Dorayaki Bayam</h1>
+            <img src="images/dorayaki.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Pancake Wortel</h1>
+            <img src="images/pancake.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Martabak Tahu</h1>
+            <img src="images/martabak.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Stick Singkong</h1>
+            <img src="images/stick.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Tahu Balado dan Buncis Rebus</h1>
+            <img src="images/tahubalado.jpg" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Sup Tahu Bakso</h1>
+            <img src="images/suptahu.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Ayam Goreng Tepung, Buncis Tumis,<br>dan Tempe Orek</h1>
+            <img src="images/ayamgoreng.png" alt="Penanganan Diabetes">
+        </div>
+        <div class="option4" onclick="">
+            <h1>Balado Daging, Buncis Tumis Bakso,<br>dan Ayam Teriyaki</h1>
+            <img src="images/baladodaging.png" alt="Penanganan Diabetes">
+        </div>
+    </div>
+
+    </div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn4" onclick="expandButton3()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+        <script>
+        // Menambahkan kelas 'show' saat halaman dimuat
+        window.addEventListener('load', () => {
+            const contentCard = document.querySelector('.content-card2');
+            contentCard.classList.add('show');
+        });
+        
+        window.addEventListener('load', () => {
+    const contentCard = document.querySelector('.content-card2');
+    const contentImage = document.querySelector('.content-image2');
+
+    // Tambahkan animasi untuk content-card
+    contentCard.classList.add('show');
+
+    // Tunggu hingga animasi content-card selesai, lalu tambahkan animasi untuk content-image
+    setTimeout(() => {
+        contentImage.classList.add('show');
+    }, 500); // 500ms adalah durasi animasi slideUp
+});
+    </script>
+</body>
+</html>

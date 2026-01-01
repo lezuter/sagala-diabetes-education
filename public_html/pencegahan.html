@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Animasi untuk logo */
+        .logo {
+            opacity: 0; /* Mulai tidak terlihat */
+            transform: translateY(20px); /* Mulai lebih bawah */
+            transition: opacity 1s ease-out 0s, transform 1s ease-out 0s; /* Animasi fade-in dan pergeseran */
+        }
+
+        /* Animasi untuk content-image */
+        .content-image {
+            opacity: 0; /* Mulai tidak terlihat */
+            transform: translateY(20px); /* Mulai lebih bawah */
+            transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s; /* Animasi fade-in dengan delay */
+        }
+
+        /* Menampilkan logo setelah halaman dimuat */
+        .logo.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Menampilkan content-image setelah halaman dimuat */
+        .content-image.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animasi untuk content-card */
+        .content-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out 1s, transform 1s ease-out 1s; /* Animasi fade-in dengan delay lebih lama */
+        }
+
+        /* Menampilkan content-card setelah halaman dimuat */
+        .content-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo" onclick="index()">
+            <h1><img src="images/Logo2.png" alt="Sagala" /></h1>
+        </div> 
+        
+        <div class="content-image">
+            <img src="images/pencegahan.jpg" alt="Ilustrasi Diabetes">
+        </div>
+
+        <div class="content-card">
+            <div class="content-text2">
+                <h1>
+                    <b>Pencegahan Diabetes Melitus<br>Pada Anak</b>
+                    <button class="back-button2" onclick="goBack()">
+                        <img src="images/previous.svg" alt="Back" />
+                    </button>
+                </h1>
+
+                <p>
+                    <strong>
+                        Bagaimana Sih Cara Mencegah Diabetes Melitus?
+                    </strong><br>
+                    Ada beberapa hal yang bisa kamu lakukan:
+                </p><br>
+                <ol class="number-list">
+                    <li><strong>Makan Makanan Sehat</strong><br>
+                        <img src="images/makanansehat.png" class="" alt="alt"/>
+                        <p>Pilihlah makanan yang mengandung karbohidrat, protein, serat, dan vitamin yang cukup. Hindari makanan yang terlalu banyak gula.</p>
+                    </li>
+                    <li><strong>Banyak beraktivitas fisik</strong><br> 
+                        <img src="images/aktivitasfisik.png" class="" alt="alt"/>
+                        <p>Lakukan olahraga ringan seperti berjalan, bersepeda, atau bermain dengan teman. Ini akan menjaga tubuhmu tetap sehat.</p>
+                    </li>
+                    <li><strong>Batasi waktu main HP/gadget</strong><br> 
+                        <img src="images/gadged.png" class="" alt="alt"/>
+                        <p>Terlalu lama di depan layar dapat membuat kamu malas bergerak dan berisiko terkena diabetes.</p>
+                    </li>
+                    <li><strong>Hindari stres</strong><br> 
+                        <img src="images/stress.png" class="" alt="alt"/>
+                        <p>Jika kamu merasa stres, cobalah untuk rileks dengan melakukan hal-hal yang menyenangkan.</p>
+                    </li>
+                </ol><br>
+                <p>
+                    Selain cara yang diberikan diatas, Kementrian Kesehatan juga memberikan beberapa cara untuk menjegah terjadinya diabetes melitus dengan cara CERDIK seperti yang ada pada gambar dibawah ini!
+                </p><br>
+                <div class="imgfield">
+                    <img src="images/cerdik.jpg" alt="pencegahan dm">
+                </div><br><br>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn1" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+
+    <script>
+        // Fungsi untuk menambahkan animasi fade-in secara berurutan
+        window.addEventListener('load', () => {
+            const logo = document.querySelector('.logo');
+            const contentImage = document.querySelector('.content-image');
+            const contentCard = document.querySelector('.content-card');
+            
+            logo.classList.add('show'); // Menampilkan logo terlebih dahulu
+            
+            // Setelah logo selesai, tampilkan content-image
+            setTimeout(() => {
+                contentImage.classList.add('show');
+            }, 100); // Menunggu 0.5 detik setelah logo muncul
+            
+            // Setelah content-image selesai, tampilkan content-card
+            setTimeout(() => {
+                contentCard.classList.add('show');
+            }, 150); // Menunggu 1.5 detik setelah content-image muncul
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Animasi fade-in untuk container */
+        .container {
+            opacity: 0; /* Awalnya tidak terlihat */
+            transition: opacity 0.5s ease-out; /* Efek transisi */
+        }
+
+        .container.show {
+            opacity: 1; /* Muncul */
+        }
+
+        /* Animasi slide-in dari bawah untuk content-card */
+        .content-card {
+            opacity: 0; /* Awalnya tidak terlihat */
+            transform: translateY(50px); /* Geser ke bawah */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Efek transisi */
+        }
+
+        .content-card.show {
+            opacity: 1; /* Muncul */
+            transform: translateY(0); /* Kembali ke posisi semula */
+        }
+
+        /* Animasi fade-in untuk content-text */
+        .content-text {
+            opacity: 0; /* Awalnya tidak terlihat */
+            transform: translateY(20px); /* Geser sedikit ke bawah */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Efek transisi */
+        }
+
+        .content-text.show {
+            opacity: 1; /* Muncul */
+            transform: translateY(0); /* Kembali ke posisi semula */
+        }
+        /* Animasi fade-in untuk content-image */
+.content-image {
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: translateY(50px); /* Geser ke bawah */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Efek transisi */
+}
+
+.content-image.show {
+    opacity: 1; /* Muncul */
+    transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+    </style>
+</head>
+<body>
+    <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo" onclick="index()">
+            <h1><img src="images/Logo2.png" alt="Sagala" /></h1>
+        </div> 
+        
+        <div class="content-image">
+            <img src="images/faktor.jpg" alt="Ilustrasi Diabetes">
+        </div>
+        <div class="content-card">
+            <div class="content-text">
+                <h1>
+                    <b>Faktor Risiko Diabetes Melitus</b>
+                    <button class="back-button" onclick="goBack()">
+                        <img src="images/previous.svg" alt="Back" />
+                    </button>
+                </h1>
+
+                <p>Faktor risiko diabetes melitus terbagi menjadi 2, 
+                    dimana ada yang tidak dapat diubah dan ada yang dapat diubah, faktor faktornya sebagai berikut :</p>
+                <br><br>
+                
+                <ol class="number-list2">
+                    <li><strong>Faktor risiko yang tidak dapat diubah.</strong>
+                        <br><br>
+                        <ol class="alphabet-list">
+                            <li>Usia > 40 tahun
+                                <img src="images/40th.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Ada riwayat keluarga dengan Diabetes Melitus
+                                <img src="images/family.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Riwayat kehamilan dengan diabetes melitus
+                                <img src="images/pregnant.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Riwayat melahirkan dengan berat bayi lebih dari 4kg dan berat bayi kurang dari 2,5Kg
+                                <img src="images/ibudanbayi.png" alt="faktor-risiko1">
+                            </li>
+                        </ol><br><br>
+                    <li><strong>Faktor risiko yang dapat diubah.</strong>
+                        <br><br>
+                        <ol class="alphabet-list">
+                            <li>Kurang aktifitas fisik
+                                <img src="images/kurangfisik.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Berat badan ideal
+                                <img src="images/beratbadan.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Dislipidemia (tingginya kadar kolestrol dalam tubuh)
+                                <img src="images/dislipidemia.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Riwayat penyakit jantung
+                                <img src="images/penyakitjantung.png" alt="faktor-risiko1">
+                            </li>
+                            <li>Hipertensi (tekanan darah tinggi > 140/90 mmhg)
+                                <img src="images/hipertensi.png" alt="faktor-risiko1">
+                            </li>    
+                        </ol>
+                    </li>
+                </ol>
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn1" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+
+    <!-- JavaScript untuk animasi -->
+    <script>
+        window.addEventListener('load', () => {
+    // Fade-in untuk container
+    const container = document.querySelector('.container');
+    container.classList.add('show');
+
+    // Fade-in untuk content-image terlebih dahulu
+    setTimeout(() => {
+        const contentImage = document.querySelector('.content-image');
+        contentImage.classList.add('show');
+    }, 100); // Delay 300ms agar content-image muncul lebih dulu
+
+    // Delay untuk content-card
+    setTimeout(() => {
+        const contentCard = document.querySelector('.content-card');
+        contentCard.classList.add('show');
+
+        // Delay untuk content-text setelah content-card muncul
+        setTimeout(() => {
+            const contentText = document.querySelector('.content-text');
+            contentText.classList.add('show');
+        }, 150); // Delay 300ms untuk content-text
+    }, 200); // Delay 500ms untuk content-card
+});
+
+    </script>
+</body>
+</html>

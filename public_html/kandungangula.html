@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Animasi untuk logo */
+        .logo2 {
+            transform: translateX(100%);  /* Mulai dari luar layar ke kanan */
+            animation: slideIn 0.5s ease-out, bounce 0.5s ease-out 0.5s forwards;
+        }
+
+        /* Keyframe untuk pergerakan slide dari kanan ke kiri */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%); /* Logo mulai dari luar layar */
+                opacity: 0;  /* Logo mulai transparan */
+            }
+            50% {
+                transform: translateX(-20px); /* Logo sedikit melampaui posisi akhir */
+                opacity: 1;  /* Membuat logo terlihat setengah jalan */
+            }
+            100% {
+                transform: translateX(0); /* Logo berhenti di tempatnya */
+                opacity: 1;  /* Pastikan logo tetap terlihat setelah animasi selesai */
+            }
+        }
+
+        /* Keyframe untuk pantulan setelah logo tiba di tempat */
+        @keyframes bounce {
+            0% {
+                transform: translateX(0);
+            }
+            20% {
+                transform: translateX(10px); /* Bergerak sedikit ke kanan */
+            }
+            50% {
+                transform: translateX(-5px); /* Bergerak sedikit ke kiri */
+            }
+            100% {
+                transform: translateX(0); /* Kembali ke posisi semula */
+            }
+        }
+        
+        /* Animasi untuk content-card */
+        .content-card3 {
+            opacity: 0;  /* Mulai dengan transparan */
+            transform: translateY(50px);  /* Mulai dari bawah */
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        /* Keyframe untuk pergerakan slide dari bawah ke atas */
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px); /* Mulai dari bawah */
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0); /* Bergerak ke atas ke posisi semula */
+                opacity: 1;  /* Menjadi terlihat */
+            }
+        }
+        
+        /* Animasi untuk content-image */
+.content-image3 {
+    transform: translateX(-100%);  /* Mulai dari luar layar ke kiri */
+    animation: slideInLeft 0.5s ease-out, bounceLeft 0.5s ease-out 0.5s forwards;
+}
+
+/* Keyframe untuk pergerakan slide dari kiri ke kanan */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Mulai dari luar layar ke kiri */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(20px);  /* Bergeser sedikit dari posisi akhir */
+        opacity: 1;  /* Menampilkan elemen */
+    }
+    100% {
+        transform: translateX(0);  /* Berhenti pada posisi semula */
+        opacity: 1;  /* Pastikan elemen tetap terlihat */
+    }
+}
+
+/* Keyframe untuk pantulan setelah content-image tiba di tempat */
+@keyframes bounceLeft {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-10px);  /* Bergerak sedikit ke kiri */
+    }
+    50% {
+        transform: translateX(5px);  /* Bergerak sedikit ke kanan */
+    }
+    100% {
+        transform: translateX(0);  /* Kembali ke posisi semula */
+    }
+}
+
+/* Tambahkan kelas .show untuk content-image */
+.content-image3.show {
+    animation: slideInLeft 0.5s ease-out, bounceLeft 0.5s ease-out 0.5s forwards;
+}
+
+.cpbtn2 {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 11px;
+  color: #62000D;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  position: sticky;
+  font-family: 'Montserrat Alternates', Montserrat;
+  z-index: 10;
+  text-align: center;
+}
+        </style>
+</head>
+<body>
+        <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container3">
+        <!-- Logo -->
+        <div class="logo2" onclick="index()">
+            <h1><img src="images/72ppi/whitelogo.png" alt="Sagala" /></h1>
+        </div> 
+        
+        <div class="content-image3">
+            <img src="images/Asset 3.png" alt="Sagala" />
+    </div>
+        <div class="content-card3">
+    <div class="content-text4">
+    <h1>
+        <b>Kandungan Gula Pada Makanan<br>dan Minuman Manis</b>
+    <button class="back-button3" onclick="goBack()">
+        <img src="images/previous.svg" alt="Back" />
+    </button>
+</h1>
+
+    <div class="scrollable-container3">
+   
+        <div class="option3">
+    <img src="images/tehgelas.png" alt="Penanganan Diabetes">
+    <p><b>Teh Gelas 160ml</b><br>Kandungan Gula : 2 Sendok Teh<br>Gram : 9 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/tehkotak.png" alt="Penanganan Diabetes">
+    <p><b>Teh Kotak 200ml</b><br>Kandungan Gula : 4 Sendok Teh<br>Gram : 16 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/tehpucuk.png" alt="Penanganan Diabetes">
+    <p><b>Teh Pucuk Harum 240ml</b><br>Kandungan Gula : 4½ Sendok Teh<br>Gram    : 18 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/boba.png" alt="Penanganan Diabetes">
+    <p><b>Boba Milk Tea 475ml</b><br>Kandungan Gula : 9.5 Sendok Teh<br>Gram : 38 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/jasjus.png" alt="Penanganan Diabetes">
+    <p><b>Minuman Serbuk Instant (1 Sachet)</b><br>Kandungan Gula : 2-6 Sendok Teh<br>Gram : 8-24 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/bengbeng.png" alt="Penanganan Diabetes">
+    <p><b>Beng - Beng 20gr</b><br>Kandungan Gula : 1¾ Sendok Teh<br>Gram   : 9 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/nextar.png" alt="Penanganan Diabetes">
+    <p><b>Nextar (1 Bungkus 3 Buah)</b><br>Kandungan Gula : 3 Sendok Teh<br>Gram   : 12 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/mie.png" alt="Penanganan Diabetes">
+    <p><b>Indomie Goreng (1 Bungkus)</b><br>Kandungan Gula : 2 Sendok Teh<br>Gram : 8 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/yupi.png" alt="Penanganan Diabetes">
+    <p><b>Yupi Strawberry Kiss (1 Biji)</b><br>Kandungan Gula : 3 Sendok Teh<br>Gram   : 12 Gram Gula</p>
+        </div>
+        <div class="option3">
+    <img src="images/chocolatos.png" alt="Penanganan Diabetes">
+    <p><b>Chocolatos Wafer Roll (1 Bungkus)</b><br>Kandungan Gula : 1 Sendok Teh<br>Gram : 4 Gram Gula</p>
+        </div>
+    </div>
+
+    </div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn2" onclick="expandButton2()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+        <script>
+        // Menambahkan kelas 'show' saat halaman dimuat
+        window.addEventListener('load', () => {
+            const contentCard = document.querySelector('.content-card2');
+            contentCard.classList.add('show');
+        });
+        </script>
+</body>
+</html>

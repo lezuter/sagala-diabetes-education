@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Animasi untuk logo */
+        .logo {
+            opacity: 0; /* Mulai tidak terlihat */
+            transform: translateY(20px); /* Mulai lebih bawah */
+            transition: opacity 1s ease-out 0s, transform 1s ease-out 0s; /* Animasi fade-in dan pergeseran */
+        }
+
+        /* Animasi untuk content-image */
+        .content-image {
+            opacity: 0; /* Mulai tidak terlihat */
+            transform: translateY(20px); /* Mulai lebih bawah */
+            transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s; /* Animasi fade-in dengan delay */
+        }
+
+        /* Menampilkan logo setelah halaman dimuat */
+        .logo.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Menampilkan content-image setelah halaman dimuat */
+        .content-image.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animasi untuk content-card */
+        .content-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out 1s, transform 1s ease-out 1s; /* Animasi fade-in dengan delay lebih lama */
+        }
+
+        /* Menampilkan content-card setelah halaman dimuat */
+        .content-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animasi untuk gambar dalam content-card */
+        .imgfield {
+            opacity: 0;
+            transition: opacity 1s ease-out 1.5s;
+        }
+
+        .imgfield.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo" onclick="index()">
+            <h1><img src="images/Logo2.png" alt="Sagala" /></h1>
+        </div> 
+        
+        <div class="content-image">
+            <img src="images/batasan.jpg" alt="Ilustrasi Diabetes">
+        </div>
+
+        <div class="content-card">
+            <div class="content-text">
+                <h1>
+                    <b>Batasan Konsumsi Gula Harian</b>
+                    <button class="back-button" onclick="goBack()">
+                        <img src="images/previous.svg" alt="Back" />
+                    </button>
+                </h1>
+
+                <p><strong>Apakah Kamu Sudah Tahu Berapa Batas Jumlah Konsumsi Gula Harian? </strong></p>
+                <p><br>
+                    Menurut Peraturan Menteri Kesehatan Nomor 30 Tahun 2013, kita disarankan untuk tidak makan terlalu banyak gula setiap hari. Jumlah gula yang aman adalah kurang dari 50 gram, atau sekitar 4 sendok makan per orang dalam sehari. Jadi, jangan makan terlalu banyak makanan atau minuman manis agar tubuh tetap sehat, ya!
+                </p><br>
+                <div class="imgfield">
+                    <img src="images/batasan1.jpg" alt="batasan gula">
+                </div><br>
+                <div class="imgfield">
+                    <img src="images/batasan2.jpg" alt="batasan gula">
+                </div><br><br>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn1" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+
+    <script>
+        // Fungsi untuk menambahkan animasi fade-in secara berurutan
+        window.addEventListener('load', () => {
+            const logo = document.querySelector('.logo');
+            const contentImage = document.querySelector('.content-image');
+            const contentCard = document.querySelector('.content-card');
+            const imgFields = document.querySelectorAll('.imgfield');
+            
+            logo.classList.add('show'); // Menampilkan logo terlebih dahulu
+            
+            // Setelah logo selesai, tampilkan content-image
+            setTimeout(() => {
+                contentImage.classList.add('show');
+            }, 50); // Menunggu 0.5 detik setelah logo muncul
+            
+            // Setelah content-image selesai, tampilkan content-card
+            setTimeout(() => {
+                contentCard.classList.add('show');
+            }, 150); // Menunggu 1.5 detik setelah content-image muncul
+
+            // Menampilkan gambar-gambar dalam content-card
+            imgFields.forEach((imgField, index) => {
+                setTimeout(() => {
+                    imgField.classList.add('show');
+                }, 200 + (index * 500)); // Gambar akan muncul bertahap
+            });
+        });
+    </script>
+</body>
+</html>

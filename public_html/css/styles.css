@@ -1,0 +1,1397 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Latar belakang hitam */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 150vw;  /* Lebar container berdasark8kan lebar viewport */
+    height: 60vh; /* Tinggi container berdasarkan tinggi viewport */
+    max-width: 1000px;  /* Lebar maksimal */
+    max-height: 800vh;  /* Tinggi maksimal */
+}
+
+/* Container utama dengan background image */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    height: 630px;  /* Atur tinggi sesuai kebutuhan */
+    background-image: url('../images/form2.jpg'); /* Ganti dengan path gambar background Anda */
+    background-size: cover; /* Menutupi seluruh area container */
+    background-position: center; /* Pusatkan gambar */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3); /* Menambahkan latar belakang transparan */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.container::before {
+    content: ''; /* Menambahkan pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/background.jpg'); /* Gambar latar belakang */
+    background-size: cover; /* Menutupi seluruh container */
+    background-position: center; /* Posisikan gambar di tengah */
+    filter: blur(20px); /* Efek blur pada background */
+    z-index: -1; /* Agar background blur tetap di belakang konten */
+}
+
+.container3 {
+    width: 150vw;  /* Lebar container berdasark8kan lebar viewport */
+    height: 60vh; /* Tinggi container berdasarkan tinggi viewport */
+    max-width: 1000px;  /* Lebar maksimal */
+    max-height: 800vh;  /* Tinggi maksimal */
+}
+
+/* Container utama dengan background image */
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    height: 630px;  /* Atur tinggi sesuai kebutuhan */
+    background-image: url('../images/artboard2.jpg'); /* Ganti dengan path gambar background Anda */
+    background-size: cover; /* Menutupi seluruh area container */
+    background-position: top; /* Pusatkan gambar */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3); /* Menambahkan latar belakang transparan */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.container3::before {
+    content: ''; /* Menambahkan pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/background2.jpg'); /* Gambar latar belakang */
+    background-size: cover; /* Menutupi seluruh container */
+    background-position: center; /* Posisikan gambar di tengah */
+    filter: blur(20px); /* Efek blur pada background */
+    z-index: -1; /* Agar background blur tetap di belakang konten */
+}
+
+/* Logo */
+.logo {
+    width: 100%;
+    padding: 30px 40px;  /* Padding untuk memberikan ruang */
+    text-align: center;
+    background-color: #fff;
+    background: linear-gradient(to bottom, #fff 80%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.logo2 {
+    width: 100%;
+    padding: 30px 40px;  /* Padding untuk memberikan ruang */
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+/* Scrollable container */
+.scrollable-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 90vh; /* Atur tinggi maksimum sesuai keinginan */
+    width: 100%;
+    padding: 10px 15px;
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none;  /* Untuk browser Firefox */
+    -ms-overflow-style: none;  /* Untuk browser IE */
+    margin-top: -25px;  /* Menggeser konten ke atas, melebihi logo */    
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none; /* Untuk browser berbasis Webkit seperti Chrome */
+}
+
+
+.logo img {
+    max-height: 50px;
+    position: relative;
+    z-index: 2;  /* Agar gambar logo tetap berada di atas */
+    margin-top: -30px; /* Mengangkat logo ke atas */
+}
+
+.logo2 img {
+    max-height: 40px;
+    left: -90px;
+    position: relative;
+    z-index: 2;  /* Agar gambar logo tetap berada di atas */
+    margin-top: -30px; /* Mengangkat logo ke atas */
+}
+
+
+/* Option card */
+.option {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+}
+
+.option img {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.option h1 {
+    color: #62000D; /* Warna judul merah */
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.option p {
+    font-size: 10px;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* Efek hover */
+.option:hover {
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #62000D;
+}
+
+/* Efek hover pada option */
+.option:hover {
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #62000D;
+}
+
+/* Efek hover pada h1 dan p di dalam option */
+.option:hover h1 {
+    color: #fff; /* Ubah warna judul menjadi putih */
+}
+
+.option:hover p {
+    color: #f0f0f0; /* Ubah warna paragraf menjadi putih atau abu-abu terang */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* Styling untuk tombol */
+.cpbtn1 {
+    width: 100%; /* Membuat tombol memenuhi lebar container */
+    padding: 10px 0; /* Menyesuaikan padding agar tetap proporsional */
+    font-size: 11px;
+    color: #62000D;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: sticky;
+    font-family: 'Montserrat Alternates', Montserrat; /* Untuk font default sistem */
+    z-index: 10;
+    text-align: center; /* Pastikan teks di tengah */
+}
+
+/* Styling untuk teks tambahan dengan animasi */
+.cpbtn1 .extra-text {
+    font-size: 11px;
+    color: #62000D;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    white-space: pre-wrap; /* Menjaga format teks */
+    overflow: hidden; /* Mencegah elemen melompat */
+}
+
+/* Teks "Powered by" menjadi hitam */
+.cpbtn1 .extra-text .powered-by {
+    color: #000; /* Warna hitam untuk "Powered by" */
+    font-weight: bold; /*font menjadi bold*/
+}
+
+/* Jika tombol di-expand, tampilkan teks tambahan */
+.cpbtn1.expanded .extra-text {
+    max-height: 200px; /* Atur tinggi maksimal sesuai konten */
+    opacity: 1; /* Tampilkan teks */
+    transform: translateY(0); /* Kembali ke posisi semula */
+    padding-top: 10px; /* Tambahkan jarak */
+}
+
+.cpbtn2 {
+    width: 100%; /* Membuat tombol memenuhi lebar container */
+    padding: 10px 0; /* Menyesuaikan padding agar tetap proporsional */
+    font-size: 11px;
+    color: #62000D;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: sticky;
+    font-family: 'Montserrat Alternates', Montserrat; /* Untuk font default sistem */
+    z-index: 10;
+    text-align: center; /* Pastikan teks di tengah */
+}
+
+/* Styling untuk teks tambahan dengan animasi */
+.cpbtn2 .extra-text {
+    font-size: 11px;
+    color: #62000D;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    white-space: pre-wrap; /* Menjaga format teks */
+    overflow: hidden; /* Mencegah elemen melompat */
+}
+
+/* Teks "Powered by" menjadi hitam */
+.cpbtn2 .extra-text .powered-by {
+    color: #000; /* Warna hitam untuk "Powered by" */
+    font-weight: bold; /*font menjadi bold*/
+}
+
+/* Jika tombol di-expand, tampilkan teks tambahan */
+.cpbtn2.expanded .extra-text {
+    max-height: 200px; /* Atur tinggi maksimal sesuai konten */
+    opacity: 1; /* Tampilkan teks */
+    transform: translateY(0); /* Kembali ke posisi semula */
+    padding-top: 10px; /* Tambahkan jarak */
+}
+
+footer {
+    margin-top: auto; /* Memastikan footer berada di bawah */
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+    width: 100%; /* Pastikan memenuhi lebar container */
+}
+
+.mulaibtn {
+    top: 73vh; /* Gunakan tinggi layar sebagai referensi */
+    padding: 13px 61px;
+    font-size: 13px;
+    color: #62000D;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    font-family: 'Montserrat Alternates', Montserrat; 
+}
+
+/* Media Query untuk iPhone 11 (828px x 1792px @2x) */
+@media screen and (min-width: 375px) and (max-width: 414px) {
+    .mulaibtn {
+        top: 69vh; /* Sesuaikan untuk perangkat ini */
+    }
+}
+
+/* Media Query untuk Samsung Galaxy A21s (720px x 1600px @2x) */
+@media screen and (min-width: 360px) and (max-width: 412px) {
+    .mulaibtn {
+        top: 69vh; /* Sesuaikan untuk perangkat ini */
+    }
+}
+
+
+.mulaibtn:hover{
+    color: #fff;
+    background-color: #62000D;
+    transition-duration: 0.5s; 
+}
+
+.container2 {
+    width: 150vw;  /* Lebar container berdasarkan lebar viewport */
+    height: 60vh; /* Tinggi container berdasarkan tinggi viewport */
+    max-width: 1000px;  /* Lebar maksimal */
+    max-height: 800vh;  /* Tinggi maksimal */
+}
+
+/* Container utama dengan background image */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    height: 630px;  /* Atur tinggi sesuai kebutuhan */
+    background-image: url('../images/form1.jpg'); /* Ganti dengan path gambar background Anda */
+    background-size: cover; /* Menutupi seluruh area container */
+    background-position: top; /* Pusatkan gambar */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3); /* Menambahkan latar belakang transparan */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+.container2::before {
+    content: ''; /* Menambahkan pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/background.jpg'); /* Gambar latar belakang */
+    background-size: cover; /* Menutupi seluruh container */
+    background-position: center; /* Posisikan gambar di tengah */
+    filter: blur(20px); /* Efek blur pada background */
+    z-index: -1; /* Agar background blur tetap di belakang konten */
+}
+
+/* Content Card */
+.content-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px 0;
+    margin-top: -25px;
+    margin-bottom: -30px;
+    height: 620px;
+    z-index: 1;
+}
+.content-card2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px 0;
+    margin-top: -25px;
+    top: -210px;
+    margin-bottom: -275px;
+    height: 900px;
+    z-index: 2;
+}
+.content-card3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px 0;
+    margin-top: -25px;
+    top: -177px;
+    margin-bottom: -208px;
+    height: 900px;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+}
+
+.content-image img {
+    width: 110%;
+    height: auto;
+    display: block;
+    margin: -20px;
+    object-fit: contain;
+    position: relative;
+    top: -30px; /* Geser gambar ke atas dengan jarak yang diinginkan */
+    z-index: 0;
+}
+.content-image2 img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: -20px;
+    object-fit: contain;
+    position: relative;
+    top: -60px; /* Geser gambar ke atas dengan jarak yang diinginkan */
+    right: -170px;
+    z-index: 0;
+}
+.content-image3 img {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: -20px;
+    object-fit: contain;
+    position: relative;
+    top: -85px; /* Geser gambar ke atas dengan jarak yang diinginkan */
+    right: -110px;
+    z-index: 0;
+}
+
+.content-image4 img {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: -20px;
+    object-fit: contain;
+    position: relative;
+    top: -60px; /* Geser gambar ke atas dengan jarak yang diinginkan */
+    right: -200px;
+    z-index: 0;
+}
+
+.content-text {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+    height: 600px; /* Tinggi tetap */
+    overflow: hidden; /* Ini menyembunyikan scroll */
+    max-height: 1000px; /* Atur tinggi maksimum container */
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none; /* Hilangkan scrollbar untuk Firefox */
+    -ms-overflow-style: none; /* Hilangkan scrollbar untuk Internet Explorer/Edge lama */
+}
+
+.content-text::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar untuk browser berbasis Webkit (Chrome, Safari, Edge Chromium) */
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .content-text {
+        -webkit-overflow-scrolling: touch; /* Swipe lebih halus di perangkat iOS */
+    }
+}
+
+.content-text2 {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+    height: 600px; /* Tinggi tetap */
+    overflow: hidden; /* Ini menyembunyikan scroll */
+    max-height: 1000px; /* Atur tinggi maksimum container */
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none; /* Hilangkan scrollbar untuk Firefox */
+    -ms-overflow-style: none; /* Hilangkan scrollbar untuk Internet Explorer/Edge lama */
+}
+
+.content-text2::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar untuk browser berbasis Webkit (Chrome, Safari, Edge Chromium) */
+}
+
+.content-text3 {
+    padding: 15px;
+    padding-bottom: 0;
+    box-sizing: border-box; /* Pastikan ukuran termasuk padding dan border */
+    width: 100%; /* Gunakan 100% untuk memenuhi induknya */
+    text-align: left;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+    height: 600px; /* Tinggi tetap */
+    overflow: hidden; /* Ini menyembunyikan scroll */
+    max-height: 1000px; /* Atur tinggi maksimum container */
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none; /* Hilangkan scrollbar untuk Firefox */
+    -ms-overflow-style: none; /* Hilangkan scrollbar untuk Internet Explorer/Edge lama */
+}
+
+.content-text3::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar untuk browser berbasis Webkit (Chrome, Safari, Edge Chromium) */
+}
+
+.content-text h1 {
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+    height: 30px;
+    color: #62000D;
+    font-size: 1em;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+
+.content-text h1::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px; /* Tinggi area tambahan */
+    background-color: #fff;
+    z-index: 2; /* Pastikan berada di bawah teks */
+}
+
+.content-text2 h1 {
+    position: sticky;
+    background-color: #fff;
+    height: 45px;
+    top: 0;
+    color: #62000D;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+
+.content-text2 h1::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px; /* Tinggi area tambahan */
+    background-color: #fff;
+    z-index: 2; /* Pastikan berada di bawah teks */
+}
+
+.content-text3 h1 {
+    position: sticky;
+    background-color: #fff;
+    height: 30px;
+    top: 0;
+    color: #62000D;
+    width: 107%;
+    font-size: 1em;
+    z-index: 10;
+    margin-bottom: 10px;
+    clip-path: inset(-15px 15px 0 0px); /* Membatasi area background */
+    margin-right: 10px;
+}
+
+
+.content-text3 h1::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px; /* Tinggi area tambahan */
+    background-color: #fff;
+    z-index: 2; /* Pastikan berada di bawah teks */
+}
+
+.content-text p {
+    font-size: 0.7em;
+    color: #000;
+    line-height: 1.4;
+    white-space: normal; /* Mengatur spasi agar mengikuti HTML */
+    line-height: 1.6; /* Memberikan jarak antar baris */
+}
+
+.content-text strong {
+    font-size: 1em;
+    color: #62000D;
+    line-height: 1.4;
+    white-space: normal; /* Mengatur spasi agar mengikuti HTML */
+    line-height: 1.6; /* Memberikan jarak antar baris */
+}
+
+.content-text2 p {
+    font-size: 0.7em;
+    color: #000;
+    line-height: 1.4;
+    white-space: normal; /* Mengatur spasi agar mengikuti HTML */
+    line-height: 1.6; /* Memberikan jarak antar baris */
+}
+
+.content-text2 strong {
+    font-size: 1em;
+    color: #62000D;
+    line-height: 1.4;
+    white-space: normal; /* Mengatur spasi agar mengikuti HTML */
+    line-height: 1.6; /* Memberikan jarak antar baris */
+}
+
+ul {
+    font-size: 0.83em;
+    color: #000;
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: disc; /* Bullet bulat hitam */
+}
+
+ol {
+    font-size: 1em;
+    color: #000;
+    margin-left: 5px;
+    padding-left: 20px;
+    list-style-type: disc; /* Bullet bulat hitam */
+}
+
+ul li {
+    font-size: 0.83em;
+    color: #000;
+    margin-bottom: 8px; /* Jarak antar setiap bullet */
+    line-height: 1.6; /* Ketinggian baris */
+}
+
+ol li {
+    font-size: 1em;
+    color: #000;
+    margin-left: 5px;
+    margin-bottom: 8px; /* Jarak antar setiap bullet */
+    line-height: 1.6; /* Ketinggian baris */
+}
+
+ol li p {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 8px; /* Jarak antar setiap bullet */
+    line-height: 1.6; /* Ketinggian baris */
+}
+
+.image1 img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: -20px;
+    object-fit: contain;
+    position: relative;
+    top: -30px; /* Geser gambar ke atas dengan jarak yang diinginkan */
+    z-index: 0;
+}
+
+.alphabet-list li img {
+    display: block; /* Memastikan gambar sebagai elemen blok */
+    margin-left: -19px; /* Atur margin negatif untuk menggeser ke kiri */
+    width: calc(50% + 20px); /* Sesuaikan ukuran gambar jika diperlukan */
+    border-radius: 10px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    position: relative;
+    z-index: -1;
+}
+
+.alphabet-list li{
+    font-size: 1em;
+    color: #62000D;
+    line-height: 1.4;
+    margin-left: -15px;
+    white-space: normal; /* Mengatur spasi agar mengikuti HTML */
+    line-height: 1.6; /* Memberikan jarak antar baris */
+}
+
+.imgfield img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    position: relative;
+    z-index: -1;
+}
+
+/* Gaya untuk elemen h1 */
+.content-title {
+    display: flex; /* Aktifkan Flexbox */
+    align-items: center; /* Rata vertikal */
+    justify-content: space-between; /* Posisikan teks di kiri dan tombol di kanan */
+    font-size: 1em;
+    color: #62000D; /* Warna teks */
+    margin-bottom: 10px;
+    position: relative; /* Pastikan posisi relatif untuk kontrol lebih lanjut */
+}
+
+/* Styling tombol kembali */
+.back-button {
+    background: none; /* Hapus latar belakang tombol */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    padding: 0; /* Pastikan padding tetap */
+    margin: 0; /* Pastikan margin tetap */
+    margin-left: auto; /* Posisikan tombol di ujung kanan */
+    display: flex; /* Atur ikon SVG di tengah */
+    position: relative;
+    z-index: 10;
+    align-items: center; /* Rata tengah vertikal */
+    top: -0; /* Naikkan posisi tombol */
+    transform: translateY(-88%);
+}
+
+/* Gaya ikon SVG di dalam tombol */
+.back-button img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px;
+    display: block;
+}
+
+.back-button2 {
+    background: none; /* Hapus latar belakang tombol */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    padding: 0; /* Pastikan padding tetap */
+    margin: 0; /* Pastikan margin tetap */
+    margin-left: auto; /* Posisikan tombol di ujung kanan */
+    display: flex; /* Atur ikon SVG di tengah */
+    position: relative;
+    z-index: 10;
+    align-items: center; /* Rata tengah vertikal */
+    top: -12px; /* Naikkan posisi tombol */
+    transform: translateY(-88%);
+}
+
+/* Gaya ikon SVG di dalam tombol */
+.back-button2 img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px;
+    display: block;
+}
+
+/* Efek hover pada tombol */
+.back-button:hover {
+    
+}
+
+.alphabet-list {
+            list-style-type: lower-alpha; /* Menggunakan huruf kecil */
+            margin-left: 20px; /* Atur jarak */
+            padding-left: 20px;
+}
+        
+.number-list {
+    list-style-type: decimal; /* Menampilkan angka 1, 2, 3, dst. */
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.number-list li {
+    font-size: 0.8em;
+    color: #000;
+    line-height: 1.6;
+}
+
+.number-list li p {
+    font-size: 0.9em;
+    color: #000;
+    line-height: 1.6;
+}
+
+.number-list li img{
+    display: block; /* Memastikan gambar sebagai elemen blok */
+    margin-left: -19px; /* Atur margin negatif untuk menggeser ke kiri */
+    width: calc(60% + 20px); /* Sesuaikan ukuran gambar jika diperlukan */
+    border-radius: 10px;
+    height: auto;
+    margin-left: 30px;
+    padding: 10px;
+    display: block;
+    object-fit: contain;
+    position: relative;
+    z-index: -1;
+}
+
+/* Option card */
+.option2 {
+    z-index: 1;
+    margin-top: 20px;
+    background-color: #62000D;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+}
+
+.option2:hover {
+    transform: scale(1.05);
+}
+.option2:hover h1 {
+    color: #888;
+}
+.option2:hover p {
+    color: #888;
+}
+/* Logo YouTube dengan background blur dan gelap */
+.option2::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Gelap dan transparan */
+    backdrop-filter: blur(5px); /* Efek blur */
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.option2:hover::before {
+    opacity: 1;
+}
+
+/* Menampilkan logo YouTube */
+.option2:hover img {
+    opacity: 0.5; /* Membuat gambar sedikit transparan saat hover */
+}
+.option2:hover .youtube-logo {
+    opacity: 70; /* Menampilkan logo YouTube */
+}
+
+/* Logo YouTube yang tersembunyi, ditampilkan pada hover */
+.youtube-logo {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: auto;
+    height: 50px;
+}
+
+.option2 img {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.option2 h1 {
+    color: #fff; /* Warna judul merah */
+    font-size: 13px;
+    margin-bottom: 2px;
+    background-color: transparent;
+    position: inherit;
+    margin-left: -8px;
+}
+
+.option2 p {
+    font-size: 10px;
+    color: #fff;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Scrollable container */
+.scrollable-container2 {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-height: 900vh; /* Atur tinggi maksimum sesuai keinginan */
+    width: 100%;
+    padding: 10px;
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none;  /* Untuk browser Firefox */
+    -ms-overflow-style: none;  /* Untuk browser IE */
+    margin-top: -25px;  /* Menggeser konten ke atas, melebihi logo */ 
+}
+
+.scrollable-container2::-webkit-scrollbar {
+    display: none; /* Untuk browser berbasis Webkit seperti Chrome */
+}
+
+.option3 {
+    background-color: #62000D;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-sizing: border-box; /* Pastikan ukuran termasuk padding dan border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+    display: flex; /* Membuat elemen berada dalam satu baris */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    margin-bottom: 5px; /* Memberi jarak antar elemen */
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.option3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Menambahkan bayangan */
+}
+
+.option3 img {
+    width: auto; /* Mengatur lebar gambar */
+    height: 70px; /* Menjaga proporsi gambar */
+    margin-right: 10px; /* Memberi jarak antara gambar dan teks */
+}
+
+.option3 p {
+    font-size: 13px;
+    text-align: left;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.scrollable-container3 {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3px;
+    max-height: 900vh; /* Atur tinggi maksimum sesuai keinginan */
+    width: 100%;
+    padding-top: 10px;
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    overflow: visible;
+    scrollbar-width: none;  /* Untuk browser Firefox */
+    -ms-overflow-style: none;  /* Untuk browser IE */
+    margin-top: -25px;  /* Menggeser konten ke atas, melebihi logo */ 
+}
+
+.scrollable-container3::-webkit-scrollbar {
+    display: none; /* Untuk browser berbasis Webkit seperti Chrome */
+}
+
+.back-button3 {
+    background: none; /* Hapus latar belakang tombol */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    padding: 0; /* Pastikan padding tetap */
+    margin: 0; /* Pastikan margin tetap */
+    margin-left: auto; /* Posisikan tombol di ujung kanan */
+    right: 10px;
+    display: flex; /* Atur ikon SVG di tengah */
+    position: relative;
+    z-index: 10;
+    align-items: center; /* Rata tengah vertikal */
+    top: -12px; /* Naikkan posisi tombol */
+    transform: translateY(-88%);
+}
+
+/* Gaya ikon SVG di dalam tombol */
+.back-button3 img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px;
+    display: block;
+}
+
+.content-text4 {
+    padding: 15px;
+    margin-right: 200px;
+    padding-bottom: 0;
+    box-sizing: border-box; /* Pastikan ukuran termasuk padding dan border */
+    width: 100%; /* Gunakan 100% untuk memenuhi induknya */
+    text-align: left;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+    height: 600px; /* Tinggi tetap */
+    overflow: hidden; /* Ini menyembunyikan scroll */
+    max-height: 1000px; /* Atur tinggi maksimum container */
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none; /* Hilangkan scrollbar untuk Firefox */
+    -ms-overflow-style: none; /* Hilangkan scrollbar untuk Internet Explorer/Edge lama */
+}
+
+.content-text4::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar untuk browser berbasis Webkit (Chrome, Safari, Edge Chromium) */
+}
+
+.content-text4 h1 {
+    position: sticky;
+    background-color: #fff;
+    height: 45px;
+    top: 0;
+    color: #62000D;
+    width: 110%;
+    font-size: 1em;
+    z-index: 10;
+    margin-bottom: 10px;
+    margin-left: -20px; /* Sesuaikan dengan padding induk */
+    padding-left: 20px; /* Pastikan teks tidak terpotong */
+}
+
+
+.content-text4 h1::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px; /* Tinggi area tambahan */
+    background-color: #fff;
+    z-index: 2; /* Pastikan berada di bawah teks */
+}
+
+.content-card4 {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 137px;
+    top: -210px;
+    margin-bottom: -240px;
+    height: 900px;
+    z-index: 1;
+}
+
+.content-text5 {
+    padding-bottom: 0;
+    box-sizing: border-box; /* Pastikan ukuran termasuk padding dan border */
+    width: 100%; /* Gunakan 100% untuk memenuhi induknya */
+    text-align: left;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+    height: 600px; /* Tinggi tetap */
+    overflow: visible; /* Ini menyembunyikan scroll */
+    max-height: 1000px; /* Atur tinggi maksimum container */
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none; /* Hilangkan scrollbar untuk Firefox */
+    -ms-overflow-style: none; /* Hilangkan scrollbar untuk Internet Explorer/Edge lama */
+}
+
+.content-text5::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar untuk browser berbasis Webkit (Chrome, Safari, Edge Chromium) */
+}
+
+.content-text5 h1 {
+    position: sticky;
+    background-color: #fff;
+    height: 45px;
+    top: 0;
+    color: #62000D;
+    width: 107%;
+    font-size: 1em;
+    z-index: 2;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+    clip-path: inset(0 10px 0 10px); /* Membatasi area background */
+}
+
+
+.content-text5 h1::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 30px; /* Tinggi area tambahan */
+    background-color: #fff;
+    z-index: 1; /* Pastikan berada di bawah teks */
+}
+
+.scrollable-container4 {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-height: 900vh; /* Atur tinggi maksimum sesuai keinginan */
+    width: 100%;
+    padding: 10px;
+    overflow: visible;
+    overflow-y: scroll; /* Memungkinkan scroll vertikal */
+    scrollbar-width: none;  /* Untuk browser Firefox */
+    -ms-overflow-style: none;  /* Untuk browser IE */
+    margin-top: -25px;  /* Menggeser konten ke atas, melebihi logo */ 
+}
+
+.scrollable-container4::-webkit-scrollbar {
+    display: none; /* Untuk browser berbasis Webkit seperti Chrome */
+}
+
+.option4 {
+    z-index: 1;
+    margin-top: 20px;
+    background-color: #62000D;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Montserrat Alternates', Montserrat;  /* Untuk font default sistem */
+}
+
+.option4:hover {
+    transform: scale(1.05);
+}
+
+.option4 h1 {
+    color: #fff; /* Warna judul merah */
+    font-size: 13px;
+    margin-bottom: 2px;
+    background: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -14px;
+    position: inherit;
+}
+
+.option4 img {
+    width: 300px;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.option4 img:hover {
+    transform: scale(1.08);
+}
+
+.back-button4 {
+    background: none; /* Hapus latar belakang tombol */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    padding: 0; /* Pastikan padding tetap */
+    margin: 0; /* Pastikan margin tetap */
+    margin-left: auto; /* Posisikan tombol di ujung kanan */
+    display: flex; /* Atur ikon SVG di tengah */
+    position: relative;
+    z-index: 10;
+    align-items: center; /* Rata tengah vertikal */
+    top: -0; /* Naikkan posisi tombol */
+    transform: translateY(-88%);
+    margin-right: 5px;
+}
+
+/* Gaya ikon SVG di dalam tombol */
+.back-button4 img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px;
+    display: block;
+}
+
+.back-button5 {
+    background: none; /* Hapus latar belakang tombol */
+    border: none; /* Hapus border */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    padding: 0; /* Pastikan padding tetap */
+    margin: 0; /* Pastikan margin tetap */
+    margin-left: auto; /* Posisikan tombol di ujung kanan */
+    display: flex; /* Atur ikon SVG di tengah */
+    position: relative;
+    z-index: 2;
+    align-items: center; /* Rata tengah vertikal */
+    top: -0; /* Naikkan posisi tombol */
+    transform: translateY(-88%);
+    margin-right: 17px;
+}
+
+/* Gaya ikon SVG di dalam tombol */
+.back-button5 img {
+    width: 30px; /* Ukuran ikon */
+    height: 30px;
+    display: block;
+}
+
+.cpbtn3 {
+    width: 100%; /* Membuat tombol memenuhi lebar container */
+    padding: 10px 0; /* Menyesuaikan padding agar tetap proporsional */
+    font-size: 11px;
+    color: #62000D;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates', Montserrat; /* Font default */
+    z-index: 10;
+    text-align: center; /* Pastikan teks di tengah */
+    transition: all 0.3s ease; /* Tambahkan efek transisi */
+}
+
+.cpbtn3:hover {
+    background-color: #f2f2f2; /* Efek hover */
+    transform: scale(1.02); /* Sedikit memperbesar tombol */
+}
+
+/* Tambahan animasi untuk teks ekstra */
+.cpbtn3 .extra-text {
+    font-size: 11px;
+    color: #62000D;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    white-space: pre-wrap; /* Menjaga format teks */
+    overflow: hidden; /* Mencegah elemen melompat */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Default tersembunyi */
+    opacity: 0;
+}
+
+/* Jika tombol di-expand, teks tambahan terlihat */
+.cpbtn3.expanded .extra-text {
+    max-height: 200px; /* Sesuaikan tinggi maksimal */
+    opacity: 1; /* Tampilkan teks */
+    padding-top: 10px; /* Tambahkan jarak */
+}
+
+.cpbtn3 .extra-text .powered-by {
+    color: #000; /* Warna hitam untuk "Powered by" */
+    font-weight: bold;
+}
+
+/* Untuk perangkat mobile */
+@media (max-width: 768px) {
+    /* Menyembunyikan elemen lain selain container */
+    body > :not(.container) :not(.container2) :not(.container3) :not(.cpbtn2):not(.cpbtn1) :not(.cpbtn3)
+            :not(.mulaibtn) :not(.extra-text) :not(.content-text) :not(.content-text2) :not(.content-text3) :not(.content-text4)
+            :not(.content-text5) :not(.content-card) :not(.content-card2) :not(.content-card3) :not(.content-card4) :not(.option)
+            :not(.option2) :not(.option3) :not(.option4){
+        display: none;
+    }
+    
+    /* Membuat container menyesuaikan lebar layar */
+    .container {
+        width: 100%;
+        height: 100vh; /* Tinggi container 100% dari viewport */
+        max-width: 100%; /* Menyesuaikan dengan lebar layar */
+    }
+    
+    /* Jika ingin menyesuaikan padding atau margin untuk mobile */
+    .container {
+        padding: 0; /* Padding lebih kecil pada mobile */
+    }
+    
+    .container2 {
+        width: 100%;
+        height: 100vh;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* Jika ingin menyesuaikan padding atau margin untuk mobile */
+    .container2 {
+        padding: 0; /* Padding lebih kecil pada mobile */
+    }
+    
+    .container3 {
+        width: 100%;
+        height: 100vh;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* Jika ingin menyesuaikan padding atau margin untuk mobile */
+    .container3 {
+        padding: 0; /* Padding lebih kecil pada mobile */
+    }
+    
+    .cpbtn1 {
+        width: 100vw; /* Menggunakan viewport penuh */
+    }
+    
+    .content-text {
+    margin-bottom: 10px; /* Ruang untuk tombol */
+    padding-bottom: 20px;
+    overflow-y: auto; /* Scrollbar jika konten panjang */
+    }
+    
+    .content-text2 {
+    margin-bottom: 10px; /* Ruang untuk tombol */
+    padding-bottom: 20px;
+    overflow-y: auto; /* Scrollbar jika konten panjang */
+    }
+
+}
+
+/* Untuk tablet dengan lebar layar antara 768px dan 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 80%; /* Lebar kontainer lebih kecil dari 100% */
+        height: auto; /* Biarkan tinggi disesuaikan */
+    }
+}
+
+.cpbtn4 {
+    width: 100%; /* Membuat tombol memenuhi lebar container */
+    padding: 10px 0; /* Menyesuaikan padding agar tetap proporsional */
+    font-size: 11px;
+    color: #62000D;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates', Montserrat; /* Font default */
+    z-index: 10;
+    position: relative;
+    text-align: center; /* Pastikan teks di tengah */
+    transition: all 0.3s ease; /* Tambahkan efek transisi */
+}
+
+/* Tambahan animasi untuk teks ekstra */
+.cpbtn4 .extra-text {
+    font-size: 11px;
+    color: #62000D;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    white-space: pre-wrap; /* Menjaga format teks */
+    overflow: hidden; /* Mencegah elemen melompat */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Default tersembunyi */
+    opacity: 0;
+}
+
+/* Jika tombol di-expand, teks tambahan terlihat */
+.cpbtn4.expanded .extra-text {
+    max-height: 200px; /* Sesuaikan tinggi maksimal */
+    opacity: 1; /* Tampilkan teks */
+    padding-top: 10px; /* Tambahkan jarak */
+}
+
+.cpbtn4 .extra-text .powered-by {
+    color: #000; /* Warna hitam untuk "Powered by" */
+    font-weight: bold;
+}
+
+.number-list2 {
+    list-style-type: decimal; /* Menampilkan angka 1, 2, 3, dst. */
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.number-list2 li {
+    font-size: 0.8em;
+    color: #000;
+    line-height: 1.6;
+}
+
+.number-list2 li img{
+    display: block; /* Memastikan gambar sebagai elemen blok */
+    margin-left: -19px; /* Atur margin negatif untuk menggeser ke kiri */
+    border-radius: 10px;
+    height: 200px;
+    width: auto;
+    margin-left: inherit;
+    margin: 0px;
+    padding: 10px;
+    display: block;
+    object-fit: contain;
+    position: relative;
+    z-index: -1;
+}
+
+/* Efek animasi keluar */
+.body-exit {
+    opacity: 0; /* Fade-out */
+    transform: translateY(20px); /* Geser ke bawah */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transisi */
+}

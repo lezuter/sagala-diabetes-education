@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala - Diabetes Melitus</title>
+    <meta name="description" content="Sagala (Sadar Kandungan Gula) adalah platform informasi terpercaya seputar diabetes melitus. Kami hadir untuk meningkatkan kesadaran akan pentingnya menjaga kesehatan dengan memahami kandungan gula dalam makanan dan minuman sehari-hari.">
+    <meta name="keywords" content="Sagala, gaya hidup, inspirasi, diabetes, melitus, diabetes melitus, sagala diabetes melitus">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sagala - Diabetes Melitus">
+    <meta property="og:description" content="Sagala adalah platform informasi seputar diabetes melitus.">
+    <meta property="og:image" content="https://sagala.life/images/icon.png">
+    <meta property="og:url" content="https://sagala.life">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Sagala - Diabetes Melitus",
+      "image": "https://sagala.life/images/icon.png",
+      "author": "Sagala Team",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sagala",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sagala.life/images/icon.png"
+        }
+      },
+      "datePublished": "2025-01-02"
+    }
+    </script>
+    <style>
+        /* Animasi fade-in */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Button dan footer dengan animasi */
+        .mulaibtn, .cpbtn1, container2 {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .mulaibtn.visible, .cpbtn1.visible, .container2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container2">
+        <!-- Scrollable Option -->
+        <div>
+            <button class="mulaibtn fade-in" onclick="menu()">MULAI</button>
+        </div>
+
+        <!-- Copyright -->
+        <footer class="">
+            <button class="cpbtn1" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+    </div>
+
+    <script>
+        // Menambahkan kelas visible setelah konten dimuat
+        window.addEventListener('load', () => {
+            const mulaibtn = document.querySelector('.mulaibtn');
+            const cpbtn1 = document.querySelector('.cpbtn1');
+
+            mulaibtn.classList.add('visible');
+            cpbtn1.classList.add('visible');
+        });
+    </script>
+</body>
+</html>

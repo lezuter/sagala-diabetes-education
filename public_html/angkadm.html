@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagala</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+    /* Animasi Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Animasi slide up */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Class untuk animasi pada konten */
+.content-card, .content-text2, .content-image {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s; /* Menunda animasi untuk elemen setelah yang lain */
+}
+
+/* Menambahkan animasi khusus untuk logo */
+.logo {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s; /* Menunda logo sedikit lebih cepat */
+}
+</style>
+</head>
+<body>
+        <script src="js/script.js"></script>
+    <!-- Container Utama -->
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo" onclick="index()">
+            <h1><img src="images/Logo2.png" alt="Sagala" /></h1>
+        </div> 
+        
+        <div class="content-image">
+        <img src="images/angka.jpg" alt="Ilustrasi Diabetes">
+    </div>
+        <div class="content-card">
+    <div class="content-text2">
+    <h1>
+        <b>Angka Kejadian Diabetes Melitus Pada Anak Indonesia</b>
+    <button class="back-button2" onclick="goBack()">
+        <img src="images/previous.svg" alt="Back" />
+    </button>
+</h1>
+
+    <p>Tahukah kamu? Menurut data dokter anak di Indonesia, 
+            pada tahun 2023, ada 1.645 anak berusia 0–18 tahun yang terkena diabetes. 
+            Itu jumlah yang cukup banyak, ya!
+    </p><br>
+    <p>
+        Kasus diabetes pada anak terus bertambah setiap tahun. Misalnya, 
+        pada tahun 2023, jumlah anak yang terkena diabetes naik hingga 70% dibandingkan sebelumnya. 
+        Hal ini menunjukkan pentingnya kita menjaga kesehatan tubuh dengan pola hidup sehat.
+    </p><br>
+    <p>
+        Sayangnya, pada tahun 2019, ada sekitar 1,5% anak yang terkena diabetes dan mengalami komplikasi hingga meninggal dunia. 
+        Jadi, kita harus lebih peduli menjaga diri dan mencegah diabetes sejak dini.
+    </p>
+    <p><br>
+    <div class="imgfield">
+        <img src="images/angkadm.jpg" alt="angkadm">
+    </div><br><br>
+</div>
+
+</div>
+
+        <!-- Copyright -->
+        <footer>
+            <button class="cpbtn1" onclick="expandButton()">© Copyright <b>Sagala.</b> All Rights Reserved</button>
+        </footer>
+        <script>
+        // Fungsi untuk menambahkan class animasi setelah halaman dimuat
+window.addEventListener('load', function() {
+    // Menambahkan class 'fade-in' setelah halaman dimuat
+    document.querySelector('.logo').classList.add('fade-in');
+    document.querySelector('.content-image').classList.add('fade-in');
+    document.querySelector('.content-card').classList.add('fade-in');
+    document.querySelector('.content-text2').classList.add('fade-in');
+});
+    </script>
+    </div>
+</body>
+</html>
