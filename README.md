@@ -39,5 +39,38 @@
 ├── Gruntfile.js          # Grunt Configuration
 └── package.json          # Node Dependencies
 ```
----
+
+## 🚀 How to Run
+
+Since this project uses **NPM** and **Bower** for dependency management, please follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/lezuter/sagala-diabetes-education.git](https://github.com/lezuter/sagala-diabetes-education.git)
+    ```
+2.  **Install Backend Dependencies (Build Tools):**
+    ```bash
+    npm install
+    ```
+3.  **Install Frontend Dependencies (Libraries):**
+    ```bash
+    bower install
+    ```
+4.  **Run the Project:**
+    Simply open `public_html/index.html` in your favorite browser.
+
+## 👨‍💻 Credits
+
 **Developed by [Derry Andhika](https://www.linkedin.com/in/lezut3r/)**
+
+* **Template:** Lezuter
+* **Illustrations:** Freepik
+* **Content Team:**
+  * Alya Widya Septina
+  * Amalia Kartika
+  * Aprilianti Zulfi
+  * Az Zahra Mustika
+  * Dewi Kusuma Ningrum
+
+---
+*© 2025 SAGALA. All Rights Reserved.*
