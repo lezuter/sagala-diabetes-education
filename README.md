@@ -5,6 +5,13 @@
 
 **SAGALA** (Sadar Kandungan Gula) is an interactive educational web platform designed to raise awareness about **Diabetes Mellitus**. It provides comprehensive information regarding risks, prevention, and daily sugar consumption limits through an engaging, animated user interface.
 
+<img width="362" height="743" alt="image" src="https://github.com/user-attachments/assets/602cacc1-2906-4507-ac9f-27955d8c6b83" />
+<img width="360" height="742" alt="image" src="https://github.com/user-attachments/assets/27312117-d53b-4f92-8a51-cbdd31589953" />
+<img width="363" height="743" alt="image" src="https://github.com/user-attachments/assets/493e86ac-61e2-4b51-8355-813e50b556f2" />
+<img width="362" height="742" alt="image" src="https://github.com/user-attachments/assets/228b7dc2-5c14-4977-9d34-a93114340f4c" />
+<img width="361" height="740" alt="image" src="https://github.com/user-attachments/assets/40b84951-4e02-4698-9bc1-749a22dcbc08" />
+<img width="359" height="740" alt="image" src="https://github.com/user-attachments/assets/cf2b38f5-cf1a-45be-87e0-c9ba81b67e8c" />
+
 ## 🌟 Key Features
 
 * **Interactive Learning Modules:**
