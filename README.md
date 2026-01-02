@@ -11,6 +11,7 @@
 <img width="362" height="742" alt="image" src="https://github.com/user-attachments/assets/228b7dc2-5c14-4977-9d34-a93114340f4c" />
 <img width="361" height="740" alt="image" src="https://github.com/user-attachments/assets/40b84951-4e02-4698-9bc1-749a22dcbc08" />
 <img width="359" height="740" alt="image" src="https://github.com/user-attachments/assets/cf2b38f5-cf1a-45be-87e0-c9ba81b67e8c" />
+<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/ae212ffd-a424-4b4a-8bfe-960fd9c4d9e1" />
 
 ## 🌟 Key Features
 
